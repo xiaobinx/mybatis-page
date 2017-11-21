@@ -49,6 +49,7 @@ public class Page {
 	}
 
 	public void setTotalSize(int totalSize) {
+		this.totalSize = totalSize;
 		if (this.totalSize % this.pageSize != 0) {
 			this.totalPage = (int) (this.totalSize / this.pageSize + 1);
 		} else {
@@ -57,7 +58,6 @@ public class Page {
 		if (totalPage == 0) {
 			totalPage = 1;
 		}
-		this.totalSize = totalSize;
 	}
 
 	@Override
